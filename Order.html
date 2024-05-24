@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+    <title>Order page</title>
+    <link rel="stylesheet" href="Supermarket.css">
+</head>
+<body>
+    <header class="home">
+        <div class="logo">
+            <img src="Icons/Logo.png" alt="Logo">
+            <div class="brand">Freshie Mart</div>
+        </div>
+        <div class="searchbar">
+            <input type="text" placeholder="Search For Products...">
+            <button type="text" value="Search" class="search">Search</button>
+        </div>
+        <div class="icons">
+            <a href="#signin">
+                <img src="Icons/login.png" alt="Sign In">
+            </a>
+            <a href="#cart">
+                <img src="Icons/cart.png" alt="Cart">
+            </a>
+        </div>
+    </header>
+    <nav class="navbar">
+        <a href="Homepage.html">Home</a>
+        <a href="about us.htm">About Us</a>
+        <a href="Diary.html">Dairy Products</a>
+        <a href="vegetables.html">Vegetables</a>
+        <a href="cosmetics and skincare.html">Cosmetics and Skin care</a>
+        <a href="Order.html">Order</a>
+        <a href="loyalty page.html">Loyalty Registration</a>
+    </nav>
+    <header>
+      <h1>Order Your Items - Freshie Mart</h1>
+    </header>
+   <div class="entire-form"> 
+    <div class="form-container">
+      <h1>Supermarket Order Form</h1>
+      <form action="Order.html" method="post">
+        <fieldset>
+          <legend>Customer Details</legend>
+          <div class="form-group">
+              <label for="customer-name">Customer Name:</label>
+              <input type="text" id="customer-name" name="customer_name" required>
+          </div>
+          <div class="form-group">
+            <label for="customer-email">Customer E-mail:</label>
+            <input type="text" id="customer-email" name="customer_email" required pattern="@">
+        </div>
+          <div class="form-group">
+              <label for="customer-phone">Customer Phone:</label>
+              <input type="text" id="customer-phone" name="customer_phone" required>
+          </div>
+          <div class="form-group">
+              <label for="customer-address">Customer Address:</label>
+              <textarea id="customer-address" name="customer_address" rows="4" required></textarea>
+          </div>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Products</legend>  
+          <div class="form-group">
+            <label for="product">Product 1:</label>
+            <input type="text" id="product" name="product" required>
+          </div>
+          <div class="form-group">
+            <label for="product">Product 2:</label>
+            <input type="text" id="product" name="product" required>
+          </div>
+          <div class="form-group">
+            <label for="product">Product 3:</label>
+            <input type="text" id="product" name="product" required>
+          </div>
+          <div class="form-group">
+            <label for="product">Product 4:</label>
+            <input type="text" id="product" name="product" required>
+          </div>
+          <div class="form-group">
+            <label for="product">Product 5:</label>
+            <input type="text" id="product" name="product" >
+          </div>
+          <div class="form-group">
+            <label for="product">Product 6:</label>
+            <input type="text" id="product" name="product" >
+          </div>
+          <div class="form-group">
+            <label for="product">Product 7:</label>
+            <input type="text" id="product" name="product" >
+          </div>
+          <div class="form-group">
+            <label for="product">Product 8:</label>
+            <input type="text" id="product" name="product" >
+          </div>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Select Payment Method</legend> 
+          <div class="form-group">
+              <div class="options">
+                  <div>
+                      <input type="radio" id="credit-card" name="payment_method" value="credit_card" required>
+                      <label for="credit-card">Credit Card</label>
+                  </div>
+                  <div>
+                      <input type="radio" id="debit-card" name="payment_method" value="debit_card">
+                      <label for="debit-card">Debit Card</label>
+                  </div>
+                  <div>
+                      <input type="radio" id="cash" name="payment_method" value="cash">
+                      <label for="cash">Cash</label>
+                  </div>
+              </div>
+          </div>
+        </fieldset>
+          <div class="submit-btn">
+              <button type="submit">
+                  <img src="Icons/cart.png" alt="Shopping Cart" class="submit">
+              </button>
+          </div>
+      </form>
+   </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+        <div class="logo">
+          <img src="Icons/Logo.png" alt="Logo">
+          <div class="brand">Freshie Mart</div>
+        </div>
+         <div class="containerfooter">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ol class="fol">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#"></a></li>
+              </ol>
+            </div>
+            <div class="footer-col">
+              <h4>Get Help</h4>
+              <ol class="fol">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Order Status</a></li>
+              </ol>
+            </div>
+            <div class="footer-col">
+              <h4>Contact Us</h4>
+              <ol class="fol">
+                <li><a href="#">Whatsapp: (+94) 77 123 1234</a></li>
+                <li><a href="#">Branch Office: (+94) 11 567 5677</a></li>
+              </ol>
+            </div>
+            <div class="footer-col">
+              <h4>Follow Us On</h4>
+              <div class="social">
+                <a href="#"><img src="Icons/insta link.webp" class="Social"></a>
+                <a href="#"><img src="Icons/fb link.png" class="Social"></a>
+                <a href="#"><img src="Icons/x link.jpeg" class="Social">
+              </div>
+            </div>
+        </footer>
+
+</body>
+</html>
