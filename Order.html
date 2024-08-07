@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Order page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Freshiemart</title>
     <link rel="stylesheet" href="Supermarket.css">
 </head>
 <body>
@@ -17,12 +20,12 @@
             <a href="#signin">
                 <img src="Icons/login.png" alt="Sign In">
             </a>
-            <a href="#cart">
+            <a href="Order.html">
                 <img src="Icons/cart.png" alt="Cart">
             </a>
         </div>
-    </header>
-    <nav class="navbar">
+      </header>
+    <div class="navbar">
         <a href="Homepage.html">Home</a>
         <a href="about us.htm">About Us</a>
         <a href="Diary.html">Dairy Products</a>
@@ -30,115 +33,120 @@
         <a href="cosmetics and skincare.html">Cosmetics and Skin care</a>
         <a href="Order.html">Order</a>
         <a href="loyalty page.html">Loyalty Registration</a>
-    </nav>
-    <header>
-      <h1>Order Your Items - Freshie Mart</h1>
-    </header>
-   <div class="entire-form"> 
-    <div class="form-container">
-      <h1>Supermarket Order Form</h1>
-      <form action="Order.html" method="post">
-        <fieldset>
-          <legend>Customer Details</legend>
-          <div class="form-group">
-              <label for="customer-name">Customer Name:</label>
-              <input type="text" id="customer-name" name="customer_name" required>
-          </div>
-          <div class="form-group">
-            <label for="customer-email">Customer E-mail:</label>
-            <input type="text" id="customer-email" name="customer_email" required pattern="@">
+    </div>
+    <div class="order-section">
+        <div class="product-section">
+            <label for="fruits"><h2>Fruits</h2></label>
+            <img src="Images/FRUITS.jpg" alt="Fruits">
+            <select id="fruits">
+              <option value="">Click to choose</option>
+              <option value="Apples">Apples</option>
+              <option value="Banana">Bananas</option>
+              <option value="Grapes">Grapes</option>
+              <option value="Oranges">Oranges</option>
+              <option value="Guava">Guava</option>
+              <option value="Pineapple">Pineapple</option>
+            </select><br><br>
+            <input type="number" id="quantity-fruits" min="1" step="1" required>
+            <label for="quantity-fruits">Kgs</label><br><br>
+            <button id="add-fruits">Add to cart</button>
         </div>
-          <div class="form-group">
-              <label for="customer-phone">Customer Phone:</label>
-              <input type="text" id="customer-phone" name="customer_phone" required>
-          </div>
-          <div class="form-group">
-              <label for="customer-address">Customer Address:</label>
-              <textarea id="customer-address" name="customer_address" rows="4" required></textarea>
-          </div>
-        </fieldset>
-        <br>
-        <fieldset>
-          <legend>Products</legend>  
-          <div class="form-group">
-            <label for="product">Product 1:</label>
-            <input type="text" id="product" name="product" required>
-          </div>
-          <div class="form-group">
-            <label for="product">Product 2:</label>
-            <input type="text" id="product" name="product" required>
-          </div>
-          <div class="form-group">
-            <label for="product">Product 3:</label>
-            <input type="text" id="product" name="product" required>
-          </div>
-          <div class="form-group">
-            <label for="product">Product 4:</label>
-            <input type="text" id="product" name="product" required>
-          </div>
-          <div class="form-group">
-            <label for="product">Product 5:</label>
-            <input type="text" id="product" name="product" >
-          </div>
-          <div class="form-group">
-            <label for="product">Product 6:</label>
-            <input type="text" id="product" name="product" >
-          </div>
-          <div class="form-group">
-            <label for="product">Product 7:</label>
-            <input type="text" id="product" name="product" >
-          </div>
-          <div class="form-group">
-            <label for="product">Product 8:</label>
-            <input type="text" id="product" name="product" >
-          </div>
-        </fieldset>
-        <br>
-        <fieldset>
-          <legend>Select Payment Method</legend> 
-          <div class="form-group">
-              <div class="options">
-                  <div>
-                      <input type="radio" id="credit-card" name="payment_method" value="credit_card" required>
-                      <label for="credit-card">Credit Card</label>
-                  </div>
-                  <div>
-                      <input type="radio" id="debit-card" name="payment_method" value="debit_card">
-                      <label for="debit-card">Debit Card</label>
-                  </div>
-                  <div>
-                      <input type="radio" id="cash" name="payment_method" value="cash">
-                      <label for="cash">Cash</label>
-                  </div>
-              </div>
-          </div>
-        </fieldset>
-          <div class="submit-btn">
-              <button type="submit">
-                  <img src="Icons/cart.png" alt="Shopping Cart" class="submit">
-              </button>
-          </div>
-      </form>
-   </div>
- </div>
 
+        <div class="product-section">
+            <label for="vegetables"><h2>Vegetables</h2></label>
+            <img src="Images/VEGETABLES.JPG" alt="Vegetables">
+            <select id="vegetables">
+              <option value="">Click to choose</option>
+              <option value="Onions">Onions</option>
+              <option value="Carrots">Carrots</option>
+              <option value="Eggplant">Eggplant</option>
+              <option value="Potato">Potato</option>
+              <option value="Leeks">Leeks</option>
+              <option value="Cabbage">Cabbage</option>
+            </select><br><br>
+            <input type="number" id="quantity-vegetables" min="1" step="1" required>
+            <label for="quantity-vegetables">Kgs</label><br><br>
+            <button id="add-vegetables">Add to cart</button>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-  <footer class="footer">
+        <div class="product-section">
+            <label for="meat"><h2>Meat and Seafood</h2></label>
+            <img src="Images/MEATANDSEAFOOD.jpg" alt="Meat and Seafood">
+            <select id="meat">
+              <option value="">Click to choose</option>
+              <option value="Chicken">Chicken</option>
+              <option value="Fish">Fish</option>
+              <option value="Prawns">Prawns</option>
+              <option value="Beef">Beef</option>
+            </select><br><br>
+            <input type="number" id="quantity-meat" min="1" step="1" required>
+            <label for="quantity-meat">Kgs</label><br><br>
+            <button id="add-meat">Add to cart</button>
+        </div>
+    
+        <div class="product-section">
+            <label for="dairy"><h2>Dairy Products</h2></label>
+            <img src="Images/DAIRY PRODUCTS.jpg" alt="Dairy Products">
+            <select id="dairy">
+              <option value="">Click to choose</option>
+              <option value="Yogurt">Yogurt</option>
+              <option value="Freshmilk">Fresh Milk</option>
+              <option value="Curd">Curd</option>
+              <option value="Egg">Egg</option>
+              <option value="Cheese">Cheese</option>
+              <option value="Butter">Butter</option>
+            </select><br><br>
+            <input type="number" id="quantity-dairy" min="1" step="1" required>
+            <label for="quantity-dairy">Quantity</label><br><br>
+            <button id="add-dairy">Add to cart</button>
+        </div>
+    
+        <div class="product-section">
+            <label for="baking"><h2>Baking and Cooking Ingredients</h2></label>
+            <img src="Images/BAKINGANDCOOKING.jpg" alt="Baking and Cooking Ingredients">
+            <select id="baking">
+              <option value="">Click to choose</option>
+              <option value="Flour">Flour</option>
+              <option value="Sugar">Sugar</option>
+              <option value="Spices">Spices</option>
+              <option value="Powder">Baking Powder</option>
+              <option value="Salt">Salt</option>
+              <option value="Oil">Coconut Oil</option>
+            </select><br><br>
+            <input type="number" id="quantity-baking" min="1" step="1" required>
+            <label for="quantity-baking">Quantity</label><br><br>
+            <button id="add-baking">Add to cart</button>
+        </div>    
+    </div>
+ 
+    <table class="order">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>  
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Total Price:</strong></td>
+                <td id="total-price">0.00</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="buttons">
+      <button id="save-favorites">Save to Favorites</button>
+      <button id="apply-favorites">Apply Favorites</button>
+      <button id="buy-now">Buy Now</button>
+    </div><br><br>
+    <footer class="footer">
         <div class="logo">
           <img src="Icons/Logo.png" alt="Logo">
           <div class="brand">Freshie Mart</div>
-        </div>
+        </div> 
          <div class="containerfooter">
           <div class="row">
             <div class="footer-col">
@@ -173,7 +181,7 @@
                 <a href="#"><img src="Icons/x link.jpeg" class="Social">
               </div>
             </div>
-        </footer>
-
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
