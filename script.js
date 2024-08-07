@@ -126,8 +126,8 @@ document.querySelectorAll('.product-section button').forEach(button => {
     });
 });
 
-document.getElementById('save-favorites').addEventListener("click", saveToFavorites);
-document.getElementById('apply-favorites').addEventListener("click", applyFavorites);
+document.getElementById('savetofav').addEventListener("click", saveToFavorites);
+document.getElementById('applytofav').addEventListener("click", applyFavorites);
 
 function saveOrderToLocalStorage() {
     const rows = document.querySelectorAll('.order tbody tr');
@@ -142,7 +142,7 @@ function saveOrderToLocalStorage() {
     localStorage.setItem('order', JSON.stringify(order));
 }
 
-document.getElementById('buy-now').addEventListener("click", () => {
+document.getElementById('buy').addEventListener("click", () => {
     saveOrderToLocalStorage();
     window.location.href = 'Order Process.html'; 
 });
