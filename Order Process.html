@@ -63,11 +63,20 @@
                       <label for="customer-phone">Customer Phone:</label>
                       <input type="tel" id="customer-phone" name="customer_phone" required pattern="[0-9]{10}">
                   </div>
-                  <div class="form-group">
-                      <label for="customer-address">Customer Address:</label>
-                      <textarea id="customer-address" name="customer_address" rows="4" required></textarea>
+              </fieldset>
+              <br>
+              <fieldset>
+                <legend>Delivery Details</legend>
+                <div class="form-group">
+                  <label for="customer-address">Delivery Address:</label>
+                  <textarea id="delivery-address" name="delivery_address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">District:</label>
+                    <input type="text" id="District" name="District" required>
                   </div>
               </fieldset>
+              <br>
               <br>
               <fieldset>
                   <legend>Select Payment Method</legend>
