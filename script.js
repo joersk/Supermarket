@@ -45,8 +45,8 @@ function addRowToTable(dropdown, quantity, isSpecial, price) {
 
     itemcol.innerText = dropdown;
     quantitycol.innerText = isSpecial ? quantity + " kg" : quantity;
-    pricecol.innerText = (price / 1).toFixed(2); // Convert price to float
-    totalcol.innerText = ((price / 1) * quantity).toFixed(2); // Calculate total price
+    pricecol.innerText = (price / 1).toFixed(2);
+    totalcol.innerText = ((price / 1) * quantity).toFixed(2);
 
     updateTotalPrice();
 }
@@ -95,7 +95,7 @@ function applyFavorites() {
     const favorites = JSON.parse(localStorage.getItem('favorites'));
     if (favorites && favorites.length > 0) {
         const tBody = document.querySelector('.order tbody');
-        tBody.innerHTML = ''; // Clear the current table
+        tBody.innerHTML = ''; 
 
         favorites.forEach(fav => {
             const newRow = tBody.insertRow();
@@ -144,7 +144,7 @@ function saveOrderToLocalStorage() {
 
 document.getElementById('buy-now').addEventListener("click", () => {
     saveOrderToLocalStorage();
-    window.location.href = 'Order Process.html'; // Replace with the actual URL of your order form page
+    window.location.href = 'Order Process.html'; 
 });
 
 
