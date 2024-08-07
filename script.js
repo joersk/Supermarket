@@ -112,9 +112,9 @@ function applyFavorites() {
         });
 
         updateTotalPrice();
-        alert("Favorites applied!");
+        alert("Applied to Favourites!");
     } else {
-        alert("No favorites found!");
+        alert("No Favourites available");
     }
 }
 
