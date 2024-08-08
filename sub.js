@@ -5,25 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const deliveryInfo = document.getElementById('delivery-info');
     const deliveryDateElem = document.getElementById('delivery-date');
 
-    // Add event listener to the form
+    
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Calculate the delivery date
+        event.preventDefault();
+        
         const currentDate = new Date();
         const deliveryDate = new Date();
-        deliveryDate.setDate(currentDate.getDate() + 1.5); // Set delivery date to 1.5
+        deliveryDate.setDate(currentDate.getDate() + 1.5);
 
-        // Format the delivery date
+        
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const formattedDate = deliveryDate.toLocaleDateString(undefined, options);
 
-        // Display the delivery information
+        
         deliveryDateElem.innerText = formattedDate;
         deliveryInfo.style.display = 'block';
     });
 
-    // Populate the order table with items from localStorage
+    
     const order = JSON.parse(localStorage.getItem('order'));
     const orderDetails = document.getElementById('order-details');
     let total = 0;
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemcol = document.createElement('td');
             itemcol.innerText = item.item;
             newRow.appendChild(itemcol);
-
             const quantitycol = document.createElement('td');
             quantitycol.innerText = item.quantity;
             newRow.appendChild(quantitycol);
@@ -55,4 +53,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('total-price').innerText = total.toFixed(2);
     }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const cardOption = document.getElementById('card');
+    const cashOption = document.getElementById('cash');
+    const cardDetails = document.getElementById('card-details');
+
+    cardOption.addEventListener('change', function () {
+        if (cardOption.checked) {
+            cardDetails.style.display = 'block';
+        }
+    });
+
+    cashOption.addEventListener('change', function () {
+        if (cashOption.checked) {
+            cardDetails.style.display = 'none';
+        }
+    });
 });

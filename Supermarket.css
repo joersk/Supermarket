@@ -406,7 +406,7 @@ strike {
     margin-top: 30px;
 }
 .submit-btn button {
-    background-color: rgb(210, 227, 210);
+    background-color: rgb(224, 66, 30);
     color: white;
     padding: 5px 5px;
     border: none;
@@ -420,7 +420,7 @@ strike {
     margin-left: 10px;
 }
 .submit-btn button:hover {
-    background-color: green;
+    background-color: red;
 }
 
 .submit {

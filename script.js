@@ -60,7 +60,7 @@ function getTable(section) {
     if (dropdown && quantity && !isNaN(quantity) && prices[dropdown]) {
         addRowToTable(dropdown, parseFloat(quantity), isSpecial, prices[dropdown]);
     } else {
-        alert("Please select an item and enter a valid quantity!!!");
+        alert("Please select an item and enter a valid quantity.");
     }
 }
 
@@ -88,7 +88,7 @@ function saveToFavorites() {
         };
     });
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    alert("Saved To Favourites!!!");
+    alert("Saved to Favorites!!!");
 }
 
 function applyFavorites() {
@@ -129,8 +129,15 @@ document.querySelectorAll('.product-section button').forEach(button => {
 document.getElementById('savetofav').addEventListener("click", saveToFavorites);
 document.getElementById('applytofav').addEventListener("click", applyFavorites);
 
-function Savetostorage() {
+
+function saveOrderToLocalStorage() {
     const rows = document.querySelectorAll('.order tbody tr');
+
+    if (rows.length === 0) {
+        alert("Your cart is empty. Please add items to the cart before proceeding.");
+        return; // Stop execution, no redirect happens
+    }
+
     const order = Array.from(rows).map(row => {
         return {
             item: row.cells[0].innerText,
@@ -139,15 +146,12 @@ function Savetostorage() {
             total: row.cells[3].innerText
         };
     });
+    
     localStorage.setItem('order', JSON.stringify(order));
+    window.location.href = 'Order Process.html'; // Redirect only if there are items in the cart
 }
 
-document.getElementById('buy').addEventListener("click", () => {
-    Savetostorage();
-    window.location.href = 'Order Process.html'; 
-});
-
-
-
+document.getElementById('buy').removeEventListener("click", saveOrderToLocalStorage); // Remove any existing listeners
+document.getElementById('buy').addEventListener("click", saveOrderToLocalStorage);
 
 
