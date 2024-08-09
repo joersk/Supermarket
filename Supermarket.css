@@ -285,7 +285,7 @@ strike {
 .footer-col h4::before{
     content: "";
     position: absolute;
-    left: 8;
+    left: 8px;
     bottom: -10px;
     background-color: red;
     height: 2px;
@@ -855,7 +855,7 @@ label {
 }
 
 button {
-    background-color: lightgreen;
+    background-color: rgb(10, 98, 10);
 }
 
 button:hover {
@@ -871,7 +871,7 @@ button:hover {
 }
 
 .buttons button {
-    background-color: lightgreen;
+    background-color: rgb(22, 141, 22);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -886,7 +886,7 @@ button:hover {
 /* Media Queries */
 
 button {
-    background-color: rgb(144, 206, 144);
+    background-color: rgb(3, 109, 3);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -1201,7 +1201,7 @@ strike {
 .footer-col h4::before{
     content: "";
     position: absolute;
-    left: 8;
+    left: 8px;
     bottom: -10px;
     background-color: red;
     height: 2px;
@@ -1322,7 +1322,7 @@ strike {
     margin-top: 30px;
 }
 .submit-btn button {
-    background-color: rgb(210, 227, 210);
+    background-color: rgb(7, 140, 7);
     color: white;
     padding: 5px 5px;
     border: none;
@@ -1771,7 +1771,7 @@ label {
 }
 
 button {
-    background-color: rgb(144, 206, 144);
+    background-color: rgb(8, 102, 8);
 }
 
 button:hover {
@@ -1787,7 +1787,7 @@ button:hover {
 }
 
 .buttons button {
-    background-color: lightgreen;
+    background-color: rgb(2, 73, 2);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -1802,7 +1802,7 @@ button:hover {
 /* Media Queries */
 
 button {
-    background-color: lightgreen;
+    background-color: rgb(6, 124, 6);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -1814,7 +1814,38 @@ button:hover {
     background-color: darkgreen;
 }
 
+
+
+
 /* Responsive styles */
+
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-top: 1px solid white;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+}
+
 @media (max-width: 1200px) {
     .product-section {
         width: calc(33.33% - 20px);
@@ -1905,7 +1936,7 @@ button:hover {
         padding-top: 10px;
         text-align: left;
         color: rgb(7, 5, 5);
-        font-size: px;
+        font-size: 0px;
     }
     .navbar a {
         width: 100%;
@@ -2281,7 +2312,7 @@ button:hover {
         padding-top: 10px;
         text-align: left;
         color: rgb(20, 15, 15);
-        font-size: px;
+        font-size: 0px;
     }
     .navbar a {
         width: 100%;
@@ -2408,7 +2439,7 @@ button:hover {
     }
 
     .container .textonimage {
-        font-size: 30px;
+        font-size: 10px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
